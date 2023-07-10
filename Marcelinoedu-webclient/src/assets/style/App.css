@@ -20,7 +20,6 @@
 }
 
 #body-div{
-  margin-top: 10%;
   background-color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
@@ -32,6 +31,9 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+}
+#routes-div{
+  margin-top: 10%;
 }
 
 h1{
