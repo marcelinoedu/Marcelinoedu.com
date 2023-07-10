@@ -1,0 +1,57 @@
+#introduction-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+#top{
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+}
+#left-side-introduction{
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+
+}
+#photo{
+    padding: 20% 0 20% 0;
+    height: 60%;
+}
+#right-side-introduction{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#intro-title{
+height: 15%;
+
+}
+#intro-p{
+    height: 10%;
+    font-weight: 300;
+    font-size: 13px;
+    color: gray;
+}
+
+#middle{
+    height: 60%;
+    margin-left: 5%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+#middle h2{
+    height: 20%;
+    width: 100%;
+}
+#middle p{
+    height: 80%;
+    width: 100%;
+    text-align:justify;
+    line-height: 27px;
+}

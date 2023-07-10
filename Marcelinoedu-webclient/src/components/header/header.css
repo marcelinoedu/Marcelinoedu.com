@@ -5,7 +5,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    font-family: 'Inter', sans-serif;}
+
+  }
+
 
 #left-side{
   width: 20%;
@@ -25,6 +27,11 @@
   height: 50%;
 }
 
+#logo-title{
+  color: black;
+  font-weight: 600;
+
+}
 #right-side{
   width:80%;
   height: 100%;
@@ -41,4 +48,20 @@
 
 
 }
-  
+
+#right-side button{
+  height: 35px;
+  width: 35px;
+  border-radius: 90%;
+  border: none;
+  background-color: #000000;
+}
+#right-side button:hover {
+  background-color: rgb(54, 54, 54);
+  cursor: pointer;
+
+}
+
+
+#icon-moon {
+color: rgb(255, 255, 255);}
