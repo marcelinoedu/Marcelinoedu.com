@@ -1,12 +1,17 @@
 import "./Header.css";
 import {Link} from "react-router-dom";
-import logo from "../../assets/imgs/logo.png"
-
+import { Cursor } from "react-simple-typewriter";
 interface HeaderProps {
   toggleTheme: () => void;
+  lightTheme:boolean;
+  hi:boolean;
+  about:boolean;
+  project:boolean;
+  contact:boolean;
+  resume:boolean;
 }
-
-function Header({toggleTheme}:HeaderProps) {
+function Header({toggleTheme, hi, about, project, contact, resume, lightTheme}:HeaderProps) {
+  
   const iconMoon = (
     <svg
       id="icon-moon"
@@ -20,7 +25,8 @@ function Header({toggleTheme}:HeaderProps) {
     </svg>
   );
   const sunIcon = (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16"
+    height="16"fill="currentColor" viewBox="0 0 16 16">
     <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
   </svg>
   );
@@ -51,19 +57,11 @@ function Header({toggleTheme}:HeaderProps) {
     <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
 </svg>
   )
-  const handleButtonClick = () => {
-    if (window.location.pathname !== '/hi') {
-      alert('Atualização em breve');
-    } else {
-      alert('Aqui esse botão não tem utilidade');
-    }
-  };
-
   return (
     <header id="header">
       <div id="top-navbar">
       <button id="iconMoon" onClick={toggleTheme}>
-        {iconMoon}
+      {lightTheme ? iconMoon : sunIcon}
       </button>
         {/* <button id="iconSun">{sunIcon}</button> */}
       </div>
@@ -71,22 +69,27 @@ function Header({toggleTheme}:HeaderProps) {
         <Link className="navbar-iconSpace" to={"/hi"}>
           <span className="navbar-icon">{terminalIcon}</span>
           <p>Hi</p>
+          <span className={`${hi ? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
         </Link>
         <Link className="navbar-iconSpace" to={"/about"}>
           <span className="navbar-icon">{aboutIcon}</span>
           <p>About</p>
+          <span className={`${about? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
         </Link>
         <Link className="navbar-iconSpace" to={"/projects"}>
           <span className="navbar-icon">{projectIcon}</span>
           <p>Projects</p>
+          <span className={`${project ? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
         </Link>
         <Link className="navbar-iconSpace" to={"/contact"}>
           <span className="navbar-icon">{contactIcon}</span>
           <p>Contact</p>
+          <span className={`${contact ? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
         </Link>
         <Link className="navbar-iconSpace" to={"/resume"}>
           <span className="navbar-icon">{resumeIcon}</span>
           <p>Resume</p>
+          <span className={`${resume ? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
         </Link>
       </div>
       <div id="botton-navbar">

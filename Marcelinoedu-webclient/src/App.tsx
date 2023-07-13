@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Navigate, useLocation, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Header from "./components/header/header";
 import Footer from "./components/footer/Footer"
 import About from './views/About';
@@ -11,7 +11,6 @@ import "./assets/style/AppDark.css";
 function App() {
   const redirectToHi = () => <Navigate to="/hi" replace />;
   const [lightTheme, setLightTheme] = useState(true);
-
   useEffect(() => {
     if (lightTheme) {
       document.body.classList.add('light-theme');
@@ -21,11 +20,55 @@ function App() {
       document.body.classList.remove('light-theme');
     }
   }, [lightTheme]);
-
   const toggleTheme = () => {
     setLightTheme(!lightTheme);
   };
+  const location = window.location.pathname;
 
+  const [HiActive, setHiActive] = useState(false);
+  const [aboutActive, setAboutActive] = useState(false);
+  const [projectsActive, setProjectsActive] = useState(false);
+  const [contactActive, setContactActive] = useState(false);
+  const [resumeActive, setResumeActive] = useState(false);
+  useEffect(() => {
+    if (location === '/hi') {
+      setHiActive(true);
+      setAboutActive(false);
+      setProjectsActive(false);
+      setContactActive(false);
+      setResumeActive(false);
+    } else if (location === '/about') {
+      setHiActive(false);
+      setAboutActive(true);
+      setProjectsActive(false);
+      setContactActive(false);
+      setResumeActive(false);
+    } else if (location === '/projects') {
+      setHiActive(false);
+      setAboutActive(false);
+      setProjectsActive(true);
+      setContactActive(false);
+      setResumeActive(false);
+    } else if (location === '/contact') {
+      setHiActive(false);
+      setAboutActive(false);
+      setProjectsActive(false);
+      setContactActive(true);
+      setResumeActive(false);
+    } else if (location === '/resume') {
+      setHiActive(false);
+      setAboutActive(false);
+      setProjectsActive(false);
+      setContactActive(false);
+      setResumeActive(true);
+    } else {
+      setHiActive(false);
+      setAboutActive(false);
+      setProjectsActive(false);
+      setContactActive(false);
+      setResumeActive(false);
+    }
+  }, [location]);
   const images = [
     { url: "/src/assets/backgroundImages/la-4.png"},
     { url: "/src/assets/backgroundImages/golden-gate.png"},
@@ -40,7 +83,12 @@ function App() {
     <div id="main">
       <Router>
         <div id="nav-div">
-          <Header toggleTheme={toggleTheme} />
+          <Header hi={HiActive} 
+          about={aboutActive} 
+          project={projectsActive} 
+          contact={contactActive} 
+          resume={resumeActive} 
+          toggleTheme={toggleTheme} lightTheme={lightTheme}/>
         </div>
         <div id="body-div">
           <div id='routes-div'>

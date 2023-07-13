@@ -1,9 +1,7 @@
 import ClubWork from "../../components/about/workComponents/workAtClub";
-import CobblebWork from "../../components/about/workComponents/workAtCobble";
-
-
-import "../../assets/style/about/work.css"
 import CobbleWork from "../../components/about/workComponents/workAtCobble";
+import "../../assets/style/about/work.css"
+
 function Work(){
     return(
         <div id="work-div">

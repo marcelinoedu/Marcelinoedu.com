@@ -43,7 +43,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.job-location{
+.light-theme .job-location{
     color: blue;
     text-decoration: none;
     font-weight: 200;
@@ -54,4 +54,6 @@
 }
 .job-tools{
     height: 20%;
+    font-size: 15px;
+    line-height: 25px;
 }

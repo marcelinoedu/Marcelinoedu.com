@@ -27,6 +27,7 @@ function CobbleWork(){
                         </h5>
                     </span>
                     <p className="job-tools">
+                    <br />
                     Java · SpringEcosystem · GO · Python · Flask · Apache Kafka · TypeScript · ReactJs · Flutter · CassandraDB · MySQL ·
                     </p>
                 </div>

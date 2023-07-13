@@ -37,7 +37,8 @@
 
 .light-theme h1{
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 500;
+  color: black;
 }
 .light-theme p{
   font-weight: 200;
@@ -55,6 +56,30 @@
 
 .light-theme h5{
   line-height: 25px;
-    font-weight: 300;
+    font-weight: 200;
     color: black;
+}
+.light-theme .job-location{
+  color: blue;
+  text-decoration: none;
+  font-weight: 200;
+  height: 10%;
+}
+
+.light-theme .navbar-iconSpace{
+  height: 60px;
+  width: 100% - 1rem;
+  margin-left: 1rem;
+  color: rgb(40, 40, 40);
+  text-decoration: none;
+  background-color:transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.isActive{
+  display: block;
+}
+.hidden{
+  display: none;
 }

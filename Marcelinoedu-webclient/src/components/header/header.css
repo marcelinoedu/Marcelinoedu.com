@@ -35,19 +35,31 @@
   justify-content: space-evenly;
 }
 
-.navbar-iconSpace{
+.light-theme .navbar-iconSpace{
+  height: 60px;
+  width: 100% - 1rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dark-theme .navbar-iconSpace{
   height: 60px;
   width: 100% - 1rem;
   margin-left: 1rem;
   color: rgb(40, 40, 40);
   text-decoration: none;
-  background-color: rgb(245, 245, 245);
-  border-radius: 30px;
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.navbar-iconSpace:hover{
+.light-theme .navbar-iconSpace:hover{
+  background-color: rgb(235, 235, 235);
+}
+.dark-theme .navbar-iconSpace:hover{
   background-color: rgb(235, 235, 235);
 }
 .navbar-iconSpace p{
