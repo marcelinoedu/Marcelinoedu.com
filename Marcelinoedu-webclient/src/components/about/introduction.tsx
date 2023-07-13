@@ -1,4 +1,4 @@
-import Photo from '../../assets/img.png'
+import Photo from '../../assets/imgs/logo.png'
 import '../../assets/style/about/introduction.css'
 function Introduction(){
       
