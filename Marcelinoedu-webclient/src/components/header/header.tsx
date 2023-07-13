@@ -54,7 +54,7 @@ function Header({toggleTheme, cursorToggle, lightTheme}:HeaderProps) {
 </svg>
   )
   return (
-    <header id="header">
+    <header id="header" style={{backgroundColor: lightTheme ? "rgba(253, 253, 253, 0.495)": "rgba(48, 48, 48, 0.702)"}}>
       <div id="top-navbar">
       <button id="icon-nav" onClick={toggleTheme}>
       {lightTheme ? iconMoon : sunIcon}
@@ -64,36 +64,36 @@ function Header({toggleTheme, cursorToggle, lightTheme}:HeaderProps) {
       <div id="middle-navbar">
       <button className="cursorButton" onClick={() => cursorToggle("/hi")}>
         <Link className="navbar-iconSpace" to={"/hi"}>
-          <span className="navbar-icon">{terminalIcon}</span>
-          <p>Hi</p>
+          <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{terminalIcon}</span>
+          <span id="navbar-name">Hi</span>
           <span id="cursor-hi" ><Cursor cursorStyle="<" /></span>
         </Link>
         </button>
         <button className="cursorButton" onClick={() => cursorToggle("/about")}>
        <Link className="navbar-iconSpace" to={"/about"}>
-          <span className="navbar-icon">{aboutIcon}</span>
-          <p>About</p>
+          <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{aboutIcon}</span>
+          <span id="navbar-name">About</span>
           <span id="cursor-about"><Cursor cursorStyle="<" /></span>
         </Link>
        </button>
        <button className="cursorButton" onClick={() => cursorToggle("/project")}>
        <Link className="navbar-iconSpace" to={"/projects"}>
-          <span className="navbar-icon">{projectIcon}</span>
-          <p>Projects</p>
+          <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{projectIcon}</span>
+          <span id="navbar-name">Projects</span>
           <span  id="cursor-project"><Cursor cursorStyle="<" /></span>
         </Link>
        </button>
        <button className="cursorButton" onClick={() => cursorToggle("/contact")}>
        <Link className="navbar-iconSpace" to={"/contact"}>
-          <span className="navbar-icon">{contactIcon}</span>
-          <p>Contact</p>
+          <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{contactIcon}</span>
+          <span id="navbar-name">Contact</span>
           <span id="cursor-contact"><Cursor cursorStyle="<" /></span>
         </Link>
        </button>
        <button className="cursorButton" onClick={() => cursorToggle("/resume")}>
        <Link className="navbar-iconSpace" to={"/resume"}>
-          <span className="navbar-icon">{resumeIcon}</span>
-          <p>Resume</p>
+          <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{resumeIcon}</span>
+          <span id="navbar-name">Resume</span>
           <span id="cursor-resume"><Cursor cursorStyle="<" /></span>
         </Link>
        </button>

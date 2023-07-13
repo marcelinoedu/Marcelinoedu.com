@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    backdrop-filter: blur(8px);
 }
 
 #top-navbar{
@@ -70,21 +71,22 @@
   flex-direction: row;
   align-items: center;
 }
-.light-theme .navbar-iconSpace:hover{
-  background-color: rgb(235, 235, 235);
-}
-.dark-theme .navbar-iconSpace:hover{
-  background-color: rgb(235, 235, 235);
-}
 .navbar-iconSpace p{
   text-decoration: none;
   padding-left: 0.5rem;
 }
 
-.navbar-icon svg{
+.navbar-iconLight svg{
   width: 25px;
   height: 25px;
-  color: gray;
+  color: rgb(71, 71, 71);
+  padding-left: 1rem;
+
+}
+.navbar-iconDark svg{
+  width: 25px;
+  height: 25px;
+  color: rgb(160, 160, 160);
   padding-left: 1rem;
 
 }

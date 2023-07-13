@@ -44,6 +44,12 @@
   font-weight: 200;
   color: gray;
 }
+.light-theme #navbar-name{
+  color: rgb(71, 71, 71);
+  font-weight: 200;
+  font-size: 15px;
+  padding-left: 5%;
+}
 .light-theme h2{
   font-size: 23px;
   font-weight: 400;
@@ -66,31 +72,20 @@
   height: 10%;
 }
 
-.light-theme .navbar-iconSpace{
-  height: 60px;
-  width: 100% - 1rem;
-  margin-left: 1rem;
-  color: rgb(40, 40, 40);
-  text-decoration: none;
-  background-color:transparent;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 .isActiveHi #cursor-hi{
-  color: black;
+  color: rgb(255, 99, 195);
 }
 .isActiveAbout #cursor-about{
-  color: black;
+  color: rgb(255, 99, 195);
 }
 .isActiveContact #cursor-contact{
-  color: black;
+  color: rgb(255, 99, 195);
 }
 .isActiveProject #cursor-project{
-  color: black;
+  color: rgb(255, 99, 195);
 }
 .isActiveResume #cursor-resume{
-  color: black;
+  color: rgb(255, 99, 195);
 }
 .isHiddenHi #cursor-hi{
   color: transparent;
