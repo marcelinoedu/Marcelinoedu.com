@@ -71,21 +71,25 @@
   font-weight: 200;
   height: 10%;
 }
-
-.isActiveHi #cursor-hi{
-  color: rgb(255, 99, 195);
+.light-theme.isActiveHi #cursor-hi{
+  color: black;
+  font-weight: 600;
 }
-.isActiveAbout #cursor-about{
-  color: rgb(255, 99, 195);
+.light-theme.isActiveAbout #cursor-about{
+  color: black;
+  font-weight: 600;
 }
-.isActiveContact #cursor-contact{
-  color: rgb(255, 99, 195);
+.light-theme.isActiveContact #cursor-contact{
+  color: black;
+  font-weight: 600;
 }
-.isActiveProject #cursor-project{
-  color: rgb(255, 99, 195);
+.light-theme.isActiveProject #cursor-project{
+  color: black;
+  font-weight: 600;
 }
-.isActiveResume #cursor-resume{
-  color: rgb(255, 99, 195);
+.light-theme.isActiveResume #cursor-resume{
+  color: black;
+  font-weight: 600;
 }
 .isHiddenHi #cursor-hi{
   color: transparent;

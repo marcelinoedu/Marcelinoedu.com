@@ -66,35 +66,35 @@ function Header({toggleTheme, cursorToggle, lightTheme}:HeaderProps) {
         <Link className="navbar-iconSpace" to={"/hi"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{terminalIcon}</span>
           <span id="navbar-name">Hi</span>
-          <span id="cursor-hi" ><Cursor cursorStyle="<" /></span>
+          <span id="cursor-hi" ><Cursor cursorStyle="⬅" /></span>
         </Link>
         </button>
         <button className="cursorButton" onClick={() => cursorToggle("/about")}>
        <Link className="navbar-iconSpace" to={"/about"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{aboutIcon}</span>
           <span id="navbar-name">About</span>
-          <span id="cursor-about"><Cursor cursorStyle="<" /></span>
+          <span id="cursor-about"><Cursor cursorStyle="⬅" /></span>
         </Link>
        </button>
        <button className="cursorButton" onClick={() => cursorToggle("/project")}>
        <Link className="navbar-iconSpace" to={"/projects"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{projectIcon}</span>
           <span id="navbar-name">Projects</span>
-          <span  id="cursor-project"><Cursor cursorStyle="<" /></span>
+          <span  id="cursor-project"><Cursor cursorStyle="⬅" /></span>
         </Link>
        </button>
        <button className="cursorButton" onClick={() => cursorToggle("/contact")}>
        <Link className="navbar-iconSpace" to={"/contact"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{contactIcon}</span>
           <span id="navbar-name">Contact</span>
-          <span id="cursor-contact"><Cursor cursorStyle="<" /></span>
+          <span id="cursor-contact"><Cursor cursorStyle="⬅" /></span>
         </Link>
        </button>
        <button className="cursorButton" onClick={() => cursorToggle("/resume")}>
        <Link className="navbar-iconSpace" to={"/resume"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{resumeIcon}</span>
           <span id="navbar-name">Resume</span>
-          <span id="cursor-resume"><Cursor cursorStyle="<" /></span>
+          <span id="cursor-resume"><Cursor cursorStyle="⬅" /></span>
         </Link>
        </button>
       </div>

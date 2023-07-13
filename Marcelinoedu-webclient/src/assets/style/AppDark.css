@@ -83,3 +83,23 @@
 .hidden{
   display: none;
 }
+.dark-theme.isActiveHi #cursor-hi{
+  color: white;
+  font-weight: 600;
+}
+.dark-theme.isActiveAbout #cursor-about{
+  color: white;
+  font-weight: 600;
+}
+.dark-theme.isActiveContact #cursor-contact{
+  color: white;
+  font-weight: 600;
+}
+.dark-theme.isActiveProject #cursor-project{
+  color: white;
+  font-weight: 600;
+}
+.dark-theme.isActiveResume #cursor-resume{
+  color: white;
+  font-weight: 600;
+}

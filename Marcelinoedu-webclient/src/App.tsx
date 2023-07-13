@@ -24,7 +24,7 @@ function App() {
     setLightTheme(!lightTheme);
   };
   useEffect(() => {
-    handleCursorClick('/hi');
+    handleCursorClick(window.location.pathname);
   }, []);
   function handleCursorClick(pathname: string) {
     if (pathname === '/hi') {
