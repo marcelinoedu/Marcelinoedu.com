@@ -77,9 +77,42 @@
   flex-direction: row;
   align-items: center;
 }
-.isActive{
-  display: block;
+.isActiveHi #cursor-hi{
+  color: black;
 }
-.hidden{
-  display: none;
+.isActiveAbout #cursor-about{
+  color: black;
+}
+.isActiveContact #cursor-contact{
+  color: black;
+}
+.isActiveProject #cursor-project{
+  color: black;
+}
+.isActiveResume #cursor-resume{
+  color: black;
+}
+.isHiddenHi #cursor-hi{
+  color: transparent;
+}
+.isHiddenAbout #cursor-about{
+  color: transparent;
+}
+.isHiddenContact #cursor-contact{
+  color: transparent;
+}
+.isHiddenProject #cursor-project{
+  color: transparent;
+}
+.isHiddenResume #cursor-resume{
+  color: transparent;
+}
+
+.cursorButton{
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
 }

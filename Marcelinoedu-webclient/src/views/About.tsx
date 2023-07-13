@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Introduction from '../components/about/introduction';
 import Work from '../components/about/work';
 import Social from '../components/about/socialIcons';

@@ -3,14 +3,10 @@ import {Link} from "react-router-dom";
 import { Cursor } from "react-simple-typewriter";
 interface HeaderProps {
   toggleTheme: () => void;
-  lightTheme:boolean;
-  hi:boolean;
-  about:boolean;
-  project:boolean;
-  contact:boolean;
-  resume:boolean;
+  lightTheme: boolean;
+  cursorToggle: (pathname: string) => void;
 }
-function Header({toggleTheme, hi, about, project, contact, resume, lightTheme}:HeaderProps) {
+function Header({toggleTheme, cursorToggle, lightTheme}:HeaderProps) {
   
   const iconMoon = (
     <svg
@@ -60,37 +56,47 @@ function Header({toggleTheme, hi, about, project, contact, resume, lightTheme}:H
   return (
     <header id="header">
       <div id="top-navbar">
-      <button id="iconMoon" onClick={toggleTheme}>
+      <button id="icon-nav" onClick={toggleTheme}>
       {lightTheme ? iconMoon : sunIcon}
       </button>
         {/* <button id="iconSun">{sunIcon}</button> */}
       </div>
       <div id="middle-navbar">
+      <button className="cursorButton" onClick={() => cursorToggle("/hi")}>
         <Link className="navbar-iconSpace" to={"/hi"}>
           <span className="navbar-icon">{terminalIcon}</span>
           <p>Hi</p>
-          <span className={`${hi ? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
+          <span id="cursor-hi" ><Cursor cursorStyle="<" /></span>
         </Link>
-        <Link className="navbar-iconSpace" to={"/about"}>
+        </button>
+        <button className="cursorButton" onClick={() => cursorToggle("/about")}>
+       <Link className="navbar-iconSpace" to={"/about"}>
           <span className="navbar-icon">{aboutIcon}</span>
           <p>About</p>
-          <span className={`${about? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
+          <span id="cursor-about"><Cursor cursorStyle="<" /></span>
         </Link>
-        <Link className="navbar-iconSpace" to={"/projects"}>
+       </button>
+       <button className="cursorButton" onClick={() => cursorToggle("/project")}>
+       <Link className="navbar-iconSpace" to={"/projects"}>
           <span className="navbar-icon">{projectIcon}</span>
           <p>Projects</p>
-          <span className={`${project ? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
+          <span  id="cursor-project"><Cursor cursorStyle="<" /></span>
         </Link>
-        <Link className="navbar-iconSpace" to={"/contact"}>
+       </button>
+       <button className="cursorButton" onClick={() => cursorToggle("/contact")}>
+       <Link className="navbar-iconSpace" to={"/contact"}>
           <span className="navbar-icon">{contactIcon}</span>
           <p>Contact</p>
-          <span className={`${contact ? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
+          <span id="cursor-contact"><Cursor cursorStyle="<" /></span>
         </Link>
-        <Link className="navbar-iconSpace" to={"/resume"}>
+       </button>
+       <button className="cursorButton" onClick={() => cursorToggle("/resume")}>
+       <Link className="navbar-iconSpace" to={"/resume"}>
           <span className="navbar-icon">{resumeIcon}</span>
           <p>Resume</p>
-          <span className={`${resume ? 'isActive' : 'hidden'}`}><Cursor cursorStyle="<" /></span>
+          <span id="cursor-resume"><Cursor cursorStyle="<" /></span>
         </Link>
+       </button>
       </div>
       <div id="botton-navbar">
       </div>

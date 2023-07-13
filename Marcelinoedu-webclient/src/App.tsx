@@ -23,52 +23,72 @@ function App() {
   const toggleTheme = () => {
     setLightTheme(!lightTheme);
   };
-  const location = window.location.pathname;
-
-  const [HiActive, setHiActive] = useState(false);
-  const [aboutActive, setAboutActive] = useState(false);
-  const [projectsActive, setProjectsActive] = useState(false);
-  const [contactActive, setContactActive] = useState(false);
-  const [resumeActive, setResumeActive] = useState(false);
   useEffect(() => {
-    if (location === '/hi') {
-      setHiActive(true);
-      setAboutActive(false);
-      setProjectsActive(false);
-      setContactActive(false);
-      setResumeActive(false);
-    } else if (location === '/about') {
-      setHiActive(false);
-      setAboutActive(true);
-      setProjectsActive(false);
-      setContactActive(false);
-      setResumeActive(false);
-    } else if (location === '/projects') {
-      setHiActive(false);
-      setAboutActive(false);
-      setProjectsActive(true);
-      setContactActive(false);
-      setResumeActive(false);
-    } else if (location === '/contact') {
-      setHiActive(false);
-      setAboutActive(false);
-      setProjectsActive(false);
-      setContactActive(true);
-      setResumeActive(false);
-    } else if (location === '/resume') {
-      setHiActive(false);
-      setAboutActive(false);
-      setProjectsActive(false);
-      setContactActive(false);
-      setResumeActive(true);
-    } else {
-      setHiActive(false);
-      setAboutActive(false);
-      setProjectsActive(false);
-      setContactActive(false);
-      setResumeActive(false);
+    handleCursorClick('/hi');
+  }, []);
+  function handleCursorClick(pathname: string) {
+    if (pathname === '/hi') {
+      console.log(pathname)
+      document.body.classList.add('isActiveHi');
+      document.body.classList.remove('isHiddenHi');
+      document.body.classList.remove('isActiveAbout');
+      document.body.classList.remove('isActiveProject');
+      document.body.classList.remove('isActiveContact');
+      document.body.classList.remove('isActiveResume');
+      document.body.classList.add('isHiddenAbout');
+      document.body.classList.add('isHiddenProject');
+      document.body.classList.add('isHiddenContact');
+      document.body.classList.add('isHiddenResume');
+    } else if (pathname === '/about') {
+      console.log(pathname)
+      document.body.classList.add('isActiveAbout');
+      document.body.classList.remove('isHiddenAbout');
+      document.body.classList.add('isHiddenHi');
+      document.body.classList.add('isHiddenProject');
+      document.body.classList.add('isHiddenContact');
+      document.body.classList.add('isHiddenResume');
+      document.body.classList.remove('isActiveHi');
+      document.body.classList.remove('isActiveProject');
+      document.body.classList.remove('isActiveContact');
+      document.body.classList.remove('isActiveResume');
+    } else if (pathname === '/project') {
+      console.log(pathname)
+      document.body.classList.add('isActiveProject');
+      document.body.classList.remove('isHiddenProject');
+      document.body.classList.add('isHiddenAbout');
+      document.body.classList.add('isHiddenHi');
+      document.body.classList.add('isHiddenContact');
+      document.body.classList.add('isHiddenResume');
+      document.body.classList.remove('isActiveHi');
+      document.body.classList.remove('isActiveAbout');
+      document.body.classList.remove('isActiveContact');
+      document.body.classList.remove('isActiveResume');
+    } else if (pathname === '/contact') {
+      console.log(pathname)
+      document.body.classList.add('isActiveContact');
+      document.body.classList.remove('isHiddenContact');
+      document.body.classList.add('isHiddenAbout');
+      document.body.classList.add('isHiddenProject');
+      document.body.classList.add('isHiddenHi');
+      document.body.classList.add('isHiddenResume');
+      document.body.classList.remove('isActiveHi');
+      document.body.classList.remove('isActiveAbout');
+      document.body.classList.remove('isActiveProject');
+      document.body.classList.remove('isActiveResume');
+    } else if (pathname === '/resume') {
+      console.log(pathname)
+      document.body.classList.add('isActiveResume');
+      document.body.classList.remove('isHiddenResume');
+      document.body.classList.add('isHiddenContact');
+      document.body.classList.add('isHiddenAbout');
+      document.body.classList.add('isHiddenProject');
+      document.body.classList.add('isHiddenHi');
+      document.body.classList.remove('isActiveHi');
+      document.body.classList.remove('isActiveAbout');
+      document.body.classList.remove('isActiveProject');
+      document.body.classList.remove('isActiveContact');
     }
-  }, [location]);
+  }
   const images = [
     { url: "/src/assets/backgroundImages/la-4.png"},
     { url: "/src/assets/backgroundImages/golden-gate.png"},
@@ -78,17 +98,11 @@ function App() {
     { url: "/src/assets/backgroundImages/saint-tropez.png"},
     { url: "/src/assets/backgroundImages/charles-river.png"}
   ];
-
   return (
     <div id="main">
       <Router>
         <div id="nav-div">
-          <Header hi={HiActive} 
-          about={aboutActive} 
-          project={projectsActive} 
-          contact={contactActive} 
-          resume={resumeActive} 
-          toggleTheme={toggleTheme} lightTheme={lightTheme}/>
+          <Header cursorToggle={handleCursorClick} toggleTheme={toggleTheme} lightTheme={lightTheme}/>
         </div>
         <div id="body-div">
           <div id='routes-div'>
