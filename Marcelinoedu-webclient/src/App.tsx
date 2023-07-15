@@ -109,8 +109,10 @@ function App() {
             <Routes>
               <Route path="/" element={redirectToHi()} />
               <Route path="/hi" element={<Hi images={images} title="Eduardo Marcelino"/>} />
-              <Route path="/about" element={<About title="About" />} />
+              <Route path="/about" element={<About theme={lightTheme} title="About" />} />
+              <Route path="/projects" element={<Contact title="Projects" />} />
               <Route path="/contact" element={<Contact title="Get in touch" />} />
+              <Route path="/Resume" element={<Contact title="Resume" />} />
             </Routes> 
           </div>
           <div id="footer-div">

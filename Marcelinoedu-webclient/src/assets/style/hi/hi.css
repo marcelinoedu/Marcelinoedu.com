@@ -29,3 +29,30 @@ background-size: cover;
     justify-content: center;
     align-items:baseline;
 }
+
+#alert-compornent-hi{
+    height: 10vh;
+    width: 10vw;
+    position:absolute;
+    left: 0;
+    bottom: 0%;
+    z-index: 1;
+    background-color: aqua;
+
+}
+.fade-effect {
+    height: 10vh;
+    width: 10vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-effect.visible {
+    opacity: 1;
+  }
+  
+  

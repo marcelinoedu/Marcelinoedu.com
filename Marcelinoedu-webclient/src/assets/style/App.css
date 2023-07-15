@@ -29,9 +29,11 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+      padding-left: 5%;
+
 }
 .light-theme #routes-div{
-  margin-top: 10%;
+  margin-top: 5%;
   padding-left: 10%;
 }
 

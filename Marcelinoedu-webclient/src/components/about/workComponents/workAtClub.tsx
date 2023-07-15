@@ -20,6 +20,7 @@ function ClubWork(){
                         </span>
                         
                     </a>
+                    <br />
                     <span className="job-experience">
                         <h5>
                             As a software developer at Club&Casa Design, I've been working on the main product team developing and maintaining the web platform that offers many benefits and tools for companies in the architecture market. 

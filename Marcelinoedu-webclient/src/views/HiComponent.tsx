@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import "../assets/style/hi/hi.css"
 import HiContent from '../components/HiComponent/ContentHiComponent';
+import AlertComponent from '../components/alertComponent/AlertComponent';
 
 interface BackgroundImagesProps {
   images: { url: string }[];
@@ -34,11 +35,27 @@ function HiComponent({ images, title }: BackgroundImagesProps) {
     transition: isTransitioning ? 'background-image 1s ease-in-out' : 'none',
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const timer1 = setTimeout(() => setIsVisible(true), 15000);
+    const timer2 = setTimeout(() => setIsVisible(false), 20000);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
+
   return (
     <div id="hi-div" style={divStyle}>
       <div id='content-div'>
         <div id='hiComponent-div'>
           <HiContent/>
+          {/* <div id='alert-compornent-hi'>
+          className={`fade-effect ${isVisible ? 'visible' : ''}`}
+            { isVisible && <AlertComponent/> }
+            <AlertComponent/>
+          </div> */}
         </div>
       </div>
     </div>

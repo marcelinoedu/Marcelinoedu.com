@@ -20,6 +20,8 @@ function CobbleWork(){
                         </span>
                         
                     </a>
+                    <br />
+
                     <span className="job-experience">
                         <h5>
                             As a software developer at Cobble, I've been working on the main product which I designed the ecoSystem and developed the main features for the web platform and the mobile app;

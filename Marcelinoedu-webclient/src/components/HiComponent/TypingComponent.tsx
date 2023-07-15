@@ -2,8 +2,8 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 function TypingComponent() {
   const [text] = useTypewriter({
     words: ["A programmer", 
-    "An enthusiast for distributed systems", 
-    "CS student at @Insper","Passionate by eletro-music"],
+    "An enthusiast for systems", 
+    "CS student","Passionate by eletro-music"],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 80,

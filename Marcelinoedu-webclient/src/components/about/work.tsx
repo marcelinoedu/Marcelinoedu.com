@@ -7,9 +7,14 @@ function Work(){
         <div id="work-div">
             <div id="title-div">
                 <h3>Work Experience</h3>
+                <br />
+                <br />
+                <br />
             </div>
             <div className="work">
                 <ClubWork/>
+                <br />
+                <br />
             </div>
             <div className="work">
                  <CobbleWork/>

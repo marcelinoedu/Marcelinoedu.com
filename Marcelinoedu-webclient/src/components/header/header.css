@@ -23,10 +23,14 @@
   color: white;
   border: none;
   margin-right: 3rem;
+  transition: 1s ease-in;
+
 }
 .light-theme #icon-nav:hover{
   background-color: rgb(50, 50, 50);
   cursor: pointer;
+  transition: 0.5s ease-in-out;
+
 }
 .dark-theme #icon-nav{
   width: 30%;
@@ -36,10 +40,14 @@
   color: black;
   border: none;
   margin-right: 3rem;
+  transition: 0.5s ease-in;
+
 }
 .dark-theme #icon-nav:hover{
   background-color: #fbb63f;
   cursor: pointer;
+  transition: 1s ease-in-out;
+
 }
 
 #middle-navbar{
