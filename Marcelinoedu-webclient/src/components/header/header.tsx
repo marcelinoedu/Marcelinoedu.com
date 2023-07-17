@@ -3,11 +3,20 @@ import {Link} from "react-router-dom";
 import { Cursor } from "react-simple-typewriter";
 interface HeaderProps {
   toggleTheme: () => void;
+  setText: () => void;
   lightTheme: boolean;
+  textLanguage: boolean;
   cursorToggle: (pathname: string) => void;
 }
-function Header({toggleTheme, cursorToggle, lightTheme}:HeaderProps) {
-  
+function Header({toggleTheme, setText, cursorToggle, lightTheme, textLanguage}:HeaderProps) {
+  const iconBrasil = (
+    <img width="100%"
+    height="100%" src="/src/assets/imgs/brazil-svgrepo-com.svg" alt="Brazil" />
+  )
+  const iconUs = (
+    <img  width="100%"
+    height="100% "src="/src/assets/imgs/united-states-of-america-svgrepo-com.svg" alt="USA" />
+  )
   const iconMoon = (
     <svg
       id="icon-moon"
@@ -56,49 +65,54 @@ function Header({toggleTheme, cursorToggle, lightTheme}:HeaderProps) {
   return (
     <header id="header" style={{backgroundColor: lightTheme ? "rgba(253, 253, 253, 0.495)": "rgba(48, 48, 48, 0.702)"}}>
       <div id="top-navbar">
-      <button id="icon-nav" onClick={toggleTheme}>
+      <button className="rotating-div" id="icon-nav" onClick={toggleTheme}>
       {lightTheme ? iconMoon : sunIcon}
       </button>
         {/* <button id="iconSun">{sunIcon}</button> */}
       </div>
       <div id="middle-navbar">
-      <button className="cursorButton" onClick={() => cursorToggle("/hi")}>
-        <Link className="navbar-iconSpace" to={"/hi"}>
+      <button className="cursorButton" onClick={() => cursorToggle("/Eduardo-marcelino")}>
+        <Link className="navbar-iconSpace" to={"/Eduardo-marcelino"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{terminalIcon}</span>
-          <span id="navbar-name">Hi</span>
+          <span id="navbar-name">{textLanguage ? "Hi!" : "Olá"}</span>
           <span id="cursor-hi" ><Cursor cursorStyle="⬅" /></span>
         </Link>
         </button>
         <button className="cursorButton" onClick={() => cursorToggle("/about")}>
        <Link className="navbar-iconSpace" to={"/about"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{aboutIcon}</span>
-          <span id="navbar-name">About</span>
+          <span id="navbar-name">{textLanguage ? "About" : "Sobre"}</span>
           <span id="cursor-about"><Cursor cursorStyle="⬅" /></span>
         </Link>
        </button>
-       <button className="cursorButton" onClick={() => cursorToggle("/project")}>
+       {/* <button className="cursorButton" onClick={() => cursorToggle("/project")}>
        <Link className="navbar-iconSpace" to={"/projects"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{projectIcon}</span>
           <span id="navbar-name">Projects</span>
           <span  id="cursor-project"><Cursor cursorStyle="⬅" /></span>
         </Link>
-       </button>
-       <button className="cursorButton" onClick={() => cursorToggle("/contact")}>
-       <Link className="navbar-iconSpace" to={"/contact"}>
+       </button> */}
+       <button className="cursorButton" onClick={() => cursorToggle("/")}>
+       <a className="navbar-iconSpace" href="mailto:eduardoofficial12@gmail.com">
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{contactIcon}</span>
-          <span id="navbar-name">Contact</span>
+          <span id="navbar-name">{textLanguage ? "Contact" : "Contato"}</span>
           <span id="cursor-contact"><Cursor cursorStyle="⬅" /></span>
-        </Link>
+        </a>
        </button>
-       <button className="cursorButton" onClick={() => cursorToggle("/resume")}>
+       {/* <button className="cursorButton" onClick={() => cursorToggle("/resume")}>
        <Link className="navbar-iconSpace" to={"/resume"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{resumeIcon}</span>
           <span id="navbar-name">Resume</span>
           <span id="cursor-resume"><Cursor cursorStyle="⬅" /></span>
         </Link>
-       </button>
+       </button> */}
       </div>
       <div id="botton-navbar">
+        <button onClick={setText} style={{backgroundColor:"transparent"}} id="icon-nav">
+          {textLanguage ?  iconUs : iconBrasil}
+          <p>{textLanguage ?  "EN-US" : "PT-BR" }</p>
+
+        </button>
       </div>
     </header>
   );

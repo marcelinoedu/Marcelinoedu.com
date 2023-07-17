@@ -9,8 +9,10 @@ import "./assets/style/App.css";
 import "./assets/style/AppDark.css";
 
 function App() {
-  const redirectToHi = () => <Navigate to="/hi" replace />;
+  const redirectToHi = () => <Navigate to="/Eduardo-marcelino" replace />;
   const [lightTheme, setLightTheme] = useState(true);
+  const [englishtext, setEnglishText] = useState(true);
+  
   useEffect(() => {
     if (lightTheme) {
       document.body.classList.add('light-theme');
@@ -20,14 +22,18 @@ function App() {
       document.body.classList.remove('light-theme');
     }
   }, [lightTheme]);
+  
   const toggleTheme = () => {
     setLightTheme(!lightTheme);
   };
+  const toggleText = () =>{
+    setEnglishText(!englishtext);
+  }
   useEffect(() => {
     handleCursorClick(window.location.pathname);
   }, []);
   function handleCursorClick(pathname: string) {
-    if (pathname === '/hi') {
+    if (pathname === '/Eduardo-marcelino') {
       console.log(pathname)
       document.body.classList.add('isActiveHi');
       document.body.classList.remove('isHiddenHi');
@@ -102,17 +108,17 @@ function App() {
     <div id="main">
       <Router>
         <div id="nav-div">
-          <Header cursorToggle={handleCursorClick} toggleTheme={toggleTheme} lightTheme={lightTheme}/>
+          <Header setText={toggleText} cursorToggle={handleCursorClick} toggleTheme={toggleTheme} textLanguage={englishtext} lightTheme={lightTheme}/>
         </div>
         <div id="body-div">
           <div id='routes-div'>
             <Routes>
               <Route path="/" element={redirectToHi()} />
-              <Route path="/hi" element={<Hi images={images} title="Eduardo Marcelino"/>} />
+              <Route path="/Eduardo-marcelino" element={<Hi textLanguage={englishtext}  images={images} title="Eduardo Marcelino"/>} />
               <Route path="/about" element={<About theme={lightTheme} title="About" />} />
-              <Route path="/projects" element={<Contact title="Projects" />} />
+              <Route path="/projects" element={redirectToHi()} />
               <Route path="/contact" element={<Contact title="Get in touch" />} />
-              <Route path="/Resume" element={<Contact title="Resume" />} />
+              <Route path="/Resume" element={redirectToHi()} />
             </Routes> 
           </div>
           <div id="footer-div">

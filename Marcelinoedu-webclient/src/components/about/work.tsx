@@ -1,5 +1,4 @@
 import ClubWork from "../../components/about/workComponents/workAtClub";
-import CobbleWork from "../../components/about/workComponents/workAtCobble";
 import "../../assets/style/about/work.css"
 
 function Work(){
@@ -15,10 +14,7 @@ function Work(){
                 <ClubWork/>
                 <br />
                 <br />
-            </div>
-            <div className="work">
-                 <CobbleWork/>
-            </div>
+            </div>x
         </div>
     )
 }
