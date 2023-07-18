@@ -65,7 +65,7 @@ function Header({toggleTheme, setText, cursorToggle, lightTheme, textLanguage}:H
   return (
     <header id="header" style={{backgroundColor: lightTheme ? "rgba(253, 253, 253, 0.495)": "rgba(48, 48, 48, 0.702)"}}>
       <div id="top-navbar">
-      <button className="rotating-div" id="icon-nav" onClick={toggleTheme}>
+      <button id="icon-nav" onClick={toggleTheme}>
       {lightTheme ? iconMoon : sunIcon}
       </button>
         {/* <button id="iconSun">{sunIcon}</button> */}

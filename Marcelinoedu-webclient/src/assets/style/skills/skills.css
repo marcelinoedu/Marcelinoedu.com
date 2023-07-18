@@ -66,10 +66,10 @@
 }
   
 .light-theme #skill-upper-div{
-    background: linear-gradient(to left, black, white);
+    background: linear-gradient(to left, black, transparent);
 }
 .dark-theme #skill-upper-div{
-    background: linear-gradient(to left, white,black);
+    background: linear-gradient(to left, white, transparent);
 }
   
 #skill-botton-div{
@@ -84,6 +84,7 @@
     border-top: 0;
     border-left: 0;
     border-right: 0;
+    transition: ease-in-out 0.8s;
 }
 .buttons-skills:hover {
     cursor:pointer;

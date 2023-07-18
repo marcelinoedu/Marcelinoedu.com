@@ -56,11 +56,10 @@ function SkillsComponent({theme}:SkillProgressProps){
             <div id="div-languages" style={{ display: activeDiv === 'languages' ? 'block' : 'none' }}>
             <div id="skills-component-section">
                 <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="Java" knowledge="90%"/></div>
-                <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="Python" knowledge="80%"/></div>
+                <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="Python" knowledge="70%"/></div>
                 <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="Go" knowledge="90%"/></div>
-                <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="JavaScript/TypeScript" knowledge="80%"/></div>
-                <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="PHP" knowledge="90%"/></div>
-                <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="Flutter" knowledge="70%"/></div>
+                <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="JavaScript/TypeScript" knowledge="70%"/></div>
+                <div className="skills-components"><SkillProgress animate={activeDiv === 'languages'} skill="Flutter" knowledge="60%"/></div>
                 <br />
                 <br />  
             </div>
@@ -70,7 +69,6 @@ function SkillsComponent({theme}:SkillProgressProps){
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" />
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-            <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />  
             </div>
             </div>
@@ -97,9 +95,8 @@ function SkillsComponent({theme}:SkillProgressProps){
             <div id="div-frameworks" style={{ display: activeDiv === 'frameworks' ? 'block' : 'none' }}>
             <div id="skills-component-section">
                 <div className="skills-components"><SkillProgress animate={activeDiv === 'frameworks'} skill="Spring" knowledge="100%"/></div>
-                <div className="skills-components"><SkillProgress animate={activeDiv === 'frameworks'} skill="Flask" knowledge="80%"/></div>
-                <div className="skills-components"><SkillProgress animate={activeDiv === 'frameworks'} skill="Gin-gonic" knowledge="80%"/></div>
-                <div className="skills-components"><SkillProgress animate={activeDiv === 'frameworks'} skill="Laravel" knowledge="100%"/></div>
+                <div className="skills-components"><SkillProgress animate={activeDiv === 'frameworks'} skill="Flask" knowledge="70%"/></div>
+                <div className="skills-components"><SkillProgress animate={activeDiv === 'frameworks'} skill="Gin" knowledge="80%"/></div>
                 <div className="skills-components"><SkillProgress animate={activeDiv === 'frameworks'} skill="Vue.js" knowledge="80%"/></div>
                 <div className="skills-components"><SkillProgress animate={activeDiv === 'frameworks'} skill="React" knowledge="80%"/></div>
                 <br />
@@ -110,7 +107,6 @@ function SkillsComponent({theme}:SkillProgressProps){
             <span className="skill-images" style={{color: theme ? "black" : "white"}}>{flask}</span>
             <span className="skill-images">{gin}</span>
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-            <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg" />
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
             </div>

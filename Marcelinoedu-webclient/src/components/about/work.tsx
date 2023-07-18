@@ -14,7 +14,7 @@ function Work(){
                 <ClubWork/>
                 <br />
                 <br />
-            </div>x
+            </div>
         </div>
     )
 }
