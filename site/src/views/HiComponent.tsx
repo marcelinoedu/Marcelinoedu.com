@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import "../assets/style/hi/hi.css"
 import HiContent from '../components/HiComponent/ContentHiComponent';
-// import AlertComponent from '../components/alertComponent/AlertComponent';
 
 interface BackgroundImagesProps {
   images: { url: string }[];
@@ -14,16 +13,17 @@ function HiComponent({ images, title }: BackgroundImagesProps) {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
-        const interval = setInterval(() => {
+    const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
       setIsTransitioning(true);
-      // const timeout = setTimeout(() => {
-      //   setIsTransitioning(false);
-      // }, 1000);
+
+      // Atualize o estado de isTransitioning após 1 segundo para remover a transição
+      setTimeout(() => setIsTransitioning(false), 1000);
     }, 4000);
 
+    // Limpe o intervalo quando o componente for desmontado
     return () => {
       clearInterval(interval);
     };
@@ -36,8 +36,24 @@ function HiComponent({ images, title }: BackgroundImagesProps) {
   const currentImagePath = images[currentImageIndex].url;
   const divStyle = {
     backgroundImage: `url(${currentImagePath})`,
-    transition: isTransitioning ? 'background-image 1s ease-in-out' : 'none',
+    transition: isTransitioning ? 'background-image 0.5s ease-in-out' : 'none',
   };
+
+  return (
+    <div id="hi-div" style={divStyle}>
+      <div id='content-div'>
+        <div id='hiComponent-div'>
+          <HiContent/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default HiComponent;
+
+
+// import AlertComponent from '../components/alertComponent/AlertComponent';
 
   // const [isVisible, setIsVisible] = useState(false);
   // useEffect(() => {
@@ -50,21 +66,8 @@ function HiComponent({ images, title }: BackgroundImagesProps) {
   //   };
   // }, []);
 
-  return (
-    <div id="hi-div" style={divStyle}>
-      <div id='content-div'>
-        <div id='hiComponent-div'>
-          <HiContent/>
-          {/* <div id='alert-compornent-hi'>
+{/* <div id='alert-compornent-hi'>
           className={`fade-effect ${isVisible ? 'visible' : ''}`}
             { isVisible && <AlertComponent/> }
             <AlertComponent/>
           </div> */}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default HiComponent;
-
