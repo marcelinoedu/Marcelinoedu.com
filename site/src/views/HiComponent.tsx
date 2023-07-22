@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import "../assets/style/hi/hi.css"
 import HiContent from '../components/HiComponent/ContentHiComponent';
-import AlertComponent from '../components/alertComponent/AlertComponent';
+// import AlertComponent from '../components/alertComponent/AlertComponent';
 
 interface BackgroundImagesProps {
   images: { url: string }[];
@@ -9,7 +9,7 @@ interface BackgroundImagesProps {
   textLanguage: boolean;
 }
 
-function HiComponent({ images, title, textLanguage }: BackgroundImagesProps) {
+function HiComponent({ images, title }: BackgroundImagesProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -19,9 +19,9 @@ function HiComponent({ images, title, textLanguage }: BackgroundImagesProps) {
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
       setIsTransitioning(true);
-      const timeout = setTimeout(() => {
-        setIsTransitioning(false);
-      }, 1000);
+      // const timeout = setTimeout(() => {
+      //   setIsTransitioning(false);
+      // }, 1000);
     }, 4000);
 
     return () => {

@@ -7,6 +7,14 @@ import Contact from './views/Contact';
 import Hi from "./views/HiComponent";
 import "./assets/style/App.css";
 import "./assets/style/AppDark.css";
+import image1 from "./assets/backgroundImages/la-4.png";
+import image2 from "./assets/backgroundImages/golden-gate.png";
+import image3 from "./assets/backgroundImages/malibu-5.png";
+import image4 from "./assets/backgroundImages/san-francisco-3.png";
+import image5 from "./assets/backgroundImages/portugal.png";
+import image6 from "./assets/backgroundImages/saint-tropez.png";
+import image7 from "./assets/backgroundImages/charles-river.png";
+
 
 function App() {
   const redirectToHi = () => <Navigate to="/Eduardo-marcelino" replace />;
@@ -96,14 +104,15 @@ function App() {
     }
   }
   const images = [
-    { url: "/src/assets/backgroundImages/la-4.png"},
-    { url: "/src/assets/backgroundImages/golden-gate.png"},
-    { url: "/src/assets/backgroundImages/malibu-5.png"},
-    { url: "/src/assets/backgroundImages/san-francisco-3.png"},
-    { url: "/src/assets/backgroundImages/portugal.png"},
-    { url: "/src/assets/backgroundImages/saint-tropez.png"},
-    { url: "/src/assets/backgroundImages/charles-river.png"}
+    { url: image1 },
+    { url: image2 },
+    { url: image3 },
+    { url: image4 },
+    { url: image5 },
+    { url: image6 },
+    { url: image7 }
   ];
+  
   return (
     <div id="main">
       <Router>
