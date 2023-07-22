@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
-import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Header from "./components/header/header";
 import Footer from "./components/footer/Footer"
 import About from './views/About';
-import Contact from './views/Contact';
+import Middleware from './Routes/Middleware';
 import Hi from "./views/HiComponent";
 import "./assets/style/App.css";
 import "./assets/style/AppDark.css";
 
 
 function App() {
-  const redirectToHi = () => <Navigate to="/Eduardo" replace />;
   const [lightTheme, setLightTheme] = useState(true);
   const [englishtext, setEnglishText] = useState(true);
   
@@ -34,7 +33,7 @@ function App() {
     handleCursorClick(window.location.pathname);
   }, []);
   function handleCursorClick(pathname: string) {
-    if (pathname === '/Eduardo') {
+    if (pathname === '/eduardo') {
       console.log(pathname)
       document.body.classList.add('isActiveHi');
       document.body.classList.remove('isHiddenHi');
@@ -97,7 +96,8 @@ function App() {
     }
   }
 
-  
+  const existingRoutes = ['eduardo', 'about', 'resume', 'contact', 'projects'];
+
   return (
     <div id="main">
       <Router>
@@ -106,14 +106,12 @@ function App() {
         </div>
         <div id="body-div">
           <div id='routes-div'>
-            <Routes>
-              <Route path="/" element={redirectToHi()} />
-              <Route path="/Eduardo" element={<Hi textLanguage={englishtext} title="Eduardo Marcelino"/>} />
-              <Route path="/about" element={<About theme={lightTheme} title="About" />} />
-              <Route path="/projects" element={redirectToHi()} />
-              <Route path="/contact" element={<Contact title="Get in touch" />} />
-              <Route path="/Resume" element={redirectToHi()} />
-            </Routes> 
+            <Middleware existingRoutes={existingRoutes}>
+              <Routes>
+                <Route path="/eduardo" element={<Hi textLanguage={englishtext} title="Eduardo"/>} />
+                <Route path="/about" element={<About theme={lightTheme} title="About" />} />
+              </Routes> 
+            </Middleware>
           </div>
           <div id="footer-div">
             <Footer/>

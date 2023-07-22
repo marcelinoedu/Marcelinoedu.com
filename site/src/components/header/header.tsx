@@ -73,8 +73,8 @@ function Header({toggleTheme, setText, cursorToggle, lightTheme, textLanguage}:H
         {/* <button id="iconSun">{sunIcon}</button> */}
       </div>
       <div id="middle-navbar">
-      <button className="cursorButton" onClick={() => cursorToggle("/Eduardo")}>
-        <Link className="navbar-iconSpace" to={"/Eduardo"}>
+      <button className="cursorButton" onClick={() => cursorToggle("/eduardo")}>
+        <Link className="navbar-iconSpace" to={"/eduardo"}>
           <span className={lightTheme ? "navbar-iconLight" : "navbar-iconDark"}>{terminalIcon}</span>
           <span id="navbar-name">{textLanguage ? "Hi!" : "Olá"}</span>
           <span id="cursor-hi" ><Cursor cursorStyle="⬅" /></span>
