@@ -1,29 +1,64 @@
 import { useEffect, useState } from 'react';
 import "../assets/style/hi/hi.css"
 import HiContent from '../components/HiComponent/ContentHiComponent';
+import image1 from "../assets/backgroundImages/la-4.png";
+import image2 from "../assets/backgroundImages/golden-gate.png";
+import image3 from "../assets/backgroundImages/malibu-5.png";
+import image4 from "../assets/backgroundImages/san-francisco-3.png";
+import image5 from "../assets/backgroundImages/portugal.png";
+import image6 from "../assets/backgroundImages/saint-tropez.png";
+import image7 from "../assets/backgroundImages/charles-river.png";
 
 interface BackgroundImagesProps {
-  images: { url: string }[];
   title: string;
   textLanguage: boolean;
 }
 
-function HiComponent({ images, title }: BackgroundImagesProps) {
+interface BackgroundImage {
+  url: string;
+}
+
+function HiComponent({ title }: BackgroundImagesProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const images: BackgroundImage[] = [
+    { url: image1 },
+    { url: image2 },
+    { url: image3 },
+    { url: image4 },
+    { url: image5 },
+    { url: image6 },
+    { url: image7 }
+  ];
+
+  // Função para pré-carregar as imagens
+  const preloadImages = () => {
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image.url;
+    });
+  };
+
+  useEffect(() => {
+    // Pré-carregar as imagens antes de iniciar o carrossel
+    preloadImages();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
       setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+      }, 500);
 
-      // Atualize o estado de isTransitioning após 1 segundo para remover a transição
       setTimeout(() => setIsTransitioning(false), 1000);
     }, 4000);
 
-    // Limpe o intervalo quando o componente for desmontado
     return () => {
       clearInterval(interval);
     };
@@ -36,7 +71,7 @@ function HiComponent({ images, title }: BackgroundImagesProps) {
   const currentImagePath = images[currentImageIndex].url;
   const divStyle = {
     backgroundImage: `url(${currentImagePath})`,
-    transition: isTransitioning ? 'background-image 0.5s ease-in-out' : 'none',
+    transition: isTransitioning ? '0.5s ease-in-out' : 'none',
   };
 
   return (
@@ -51,6 +86,9 @@ function HiComponent({ images, title }: BackgroundImagesProps) {
 }
 
 export default HiComponent;
+
+
+
 
 
 // import AlertComponent from '../components/alertComponent/AlertComponent';

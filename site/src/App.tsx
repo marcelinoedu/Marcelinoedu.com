@@ -7,17 +7,10 @@ import Contact from './views/Contact';
 import Hi from "./views/HiComponent";
 import "./assets/style/App.css";
 import "./assets/style/AppDark.css";
-import image1 from "./assets/backgroundImages/la-4.png";
-import image2 from "./assets/backgroundImages/golden-gate.png";
-import image3 from "./assets/backgroundImages/malibu-5.png";
-import image4 from "./assets/backgroundImages/san-francisco-3.png";
-import image5 from "./assets/backgroundImages/portugal.png";
-import image6 from "./assets/backgroundImages/saint-tropez.png";
-import image7 from "./assets/backgroundImages/charles-river.png";
 
 
 function App() {
-  const redirectToHi = () => <Navigate to="/Eduardo-marcelino" replace />;
+  const redirectToHi = () => <Navigate to="/Eduardo" replace />;
   const [lightTheme, setLightTheme] = useState(true);
   const [englishtext, setEnglishText] = useState(true);
   
@@ -41,7 +34,7 @@ function App() {
     handleCursorClick(window.location.pathname);
   }, []);
   function handleCursorClick(pathname: string) {
-    if (pathname === '/Eduardo-marcelino') {
+    if (pathname === '/Eduardo') {
       console.log(pathname)
       document.body.classList.add('isActiveHi');
       document.body.classList.remove('isHiddenHi');
@@ -103,15 +96,7 @@ function App() {
       document.body.classList.remove('isActiveContact');
     }
   }
-  const images = [
-    { url: image1 },
-    { url: image2 },
-    { url: image3 },
-    { url: image4 },
-    { url: image5 },
-    { url: image6 },
-    { url: image7 }
-  ];
+
   
   return (
     <div id="main">
@@ -123,7 +108,7 @@ function App() {
           <div id='routes-div'>
             <Routes>
               <Route path="/" element={redirectToHi()} />
-              <Route path="/Eduardo-marcelino" element={<Hi textLanguage={englishtext}  images={images} title="Eduardo Marcelino"/>} />
+              <Route path="/Eduardo" element={<Hi textLanguage={englishtext} title="Eduardo Marcelino"/>} />
               <Route path="/about" element={<About theme={lightTheme} title="About" />} />
               <Route path="/projects" element={redirectToHi()} />
               <Route path="/contact" element={<Contact title="Get in touch" />} />
