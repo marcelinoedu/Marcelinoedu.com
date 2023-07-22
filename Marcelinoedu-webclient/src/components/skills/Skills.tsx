@@ -6,7 +6,9 @@ interface SkillProgressProps{
 }
 
 function SkillsComponent({theme}:SkillProgressProps){
-    const flask = (<i className="devicon-flask-original-wordmark"></i>)
+    const flask = (
+    <i className="devicon-flask-original-wordmark"></i>
+    )
     const gin = (
         <img style={{width:"80%", backgroundColor: theme ? 'transparent' : 'white', borderRadius: "90px"}} src="/src/assets/imgs/color.svg" alt="gin" />
     )
