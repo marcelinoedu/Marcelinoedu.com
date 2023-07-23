@@ -6,7 +6,7 @@ interface IntroductionProps{
 }
 function Introduction({ textLanguage }: IntroductionProps) {
     const introductionText = textLanguage
-      ? `With 20 years under my belt, I hail from Maceió, Alagoas, but now call São Paulo home. I'm on a mission to crack the code of complex applications(I gave this to me), seamlessly to a honor. Armed with an analytical and professional approach, I never shy away from challenges, in fact, I embrace the unknown as an opportunity to level up my skills.
+      ? `With 20 years under my belt, I hail from Maceió, Alagoas, but now spending life at São Paulo. I'm on a mission to crack the code of complex applications(I gave this to me), seamlessly to a honor. Armed with an analytical and professional approach, I never shy away from challenges, in fact, I embrace the unknown as an opportunity to level up my skills.
   No fancy degree here, I'm a self-taught programmer! Who needs specialization when you can learn it all?(I do, I am willing with cs).
   Constantly upgrading my knowledge, I thrive on evolving with the dynamic tech market.
   My ultimate quest? Heaven, besides the black belt. With the tenacity of a code warrior (call me a Cybertemplary ... Deus Vult!), I fearlessly embrace audacious projects, conquering them one line of code at a time.
