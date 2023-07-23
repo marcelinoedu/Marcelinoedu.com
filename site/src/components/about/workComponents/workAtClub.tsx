@@ -1,4 +1,10 @@
-function ClubWork(){
+import YearsAndMonthsSinceStartDate from "./YearsAndMonthsSinceStartDate";
+
+interface WorkPropsClub{
+    textLanguage:boolean;
+}
+function ClubWork({textLanguage}:WorkPropsClub){
+    const startDate = '2021-06-28'
     const arrowUp = 
     (
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
@@ -11,21 +17,24 @@ function ClubWork(){
     return(
         <div className="workBodyDiv">
                 <div className="work-date">
-                06/2021 - Present
+                <YearsAndMonthsSinceStartDate startDate={startDate} />
+
                 </div>
                 <div className="job-description">
                     <a className="job-location" href="https://clubecasadesign.com.br/">
                         <span>
-                            Club&Casa Design - FullStack Developer {arrowUp}
+                        {textLanguage ? "Club&Casa Design - FullStack Developer" : "Club&Casa Design - Desenvolvedor FullStack"} {arrowUp}
                         </span>
                         
                     </a>
                     <br />
                     <span className="job-experience">
                         <h5>
-                            As a software developer at Club&Casa Design, I've been working on the main product team developing and maintaining the web platform that offers many benefits and tools for companies in the architecture market. 
-                             My focus is on building and maintaining new resilient tools and features to integrate into Club&Casa Design's products.
+                            {textLanguage? `As a software developer at Club&Casa Design, I've been working on the main product team developing and maintaining the web platform that offers many benefits and tools for companies in the architecture market. 
+                             My focus is on building and maintaining new resilient tools and features to integrate into Club&Casa Design's products.` : `Como desenvolvedor de software no Club&Casa Design, atuei na equipe principal de produtos desenvolvendo e mantendo a plataforma web que oferece diversos benefícios e ferramentas para empresas do mercado de arquitetura. O meu foco é manter ferramentas e funcionalidades e as integrando nos produtos Club&Casa Design`}
                         </h5>
+                        <br />
+                        <br />
                     </span>
                     <p className="job-tools">
                     PHP · Laravel · JavaScript · Vue.js · Flutter · Dart · MySQL

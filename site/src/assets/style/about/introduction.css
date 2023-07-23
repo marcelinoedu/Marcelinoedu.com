@@ -7,7 +7,7 @@
 #top{
     display: flex;
     flex-direction: row;
-    height: 40%;
+    height: 35%;
 }
 #left-side-introduction{
     width: 30%;
@@ -46,12 +46,12 @@ height: 15%;
     flex-direction: column;
 }
 #middle h2{
-    height: 20%;
+    height: 10%;
     width: 100%;
 }
 #middle p{
     height: 80%;
     width: 100%;
     text-align:justify;
-    line-height: 27px;
+    line-height: 22px;
 }

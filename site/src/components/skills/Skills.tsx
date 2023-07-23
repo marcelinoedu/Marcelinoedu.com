@@ -4,9 +4,10 @@ import { useState } from "react";
 import ginImage from "/src/assets/imgs/color.svg";
 interface SkillProgressProps{
     theme:boolean;
+    textLanguage:boolean
 }
 
-function SkillsComponent({theme}:SkillProgressProps){
+function SkillsComponent({theme, textLanguage}:SkillProgressProps){
     const flask = (
     <i className="devicon-flask-original-wordmark"></i>
     )

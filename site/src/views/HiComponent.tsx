@@ -18,7 +18,7 @@ interface BackgroundImage {
   url: string;
 }
 
-function HiComponent({ title }: BackgroundImagesProps) {
+function HiComponent({ title, textLanguage }: BackgroundImagesProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -33,7 +33,6 @@ function HiComponent({ title }: BackgroundImagesProps) {
     { url: image7 }
   ];
 
-  // Função para pré-carregar as imagens
   const preloadImages = () => {
     images.forEach((image) => {
       const img = new Image();
@@ -42,7 +41,6 @@ function HiComponent({ title }: BackgroundImagesProps) {
   };
 
   useEffect(() => {
-    // Pré-carregar as imagens antes de iniciar o carrossel
     preloadImages();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -78,7 +76,7 @@ function HiComponent({ title }: BackgroundImagesProps) {
     <div id="hi-div" style={divStyle}>
       <div id='content-div'>
         <div id='hiComponent-div'>
-          <HiContent/>
+          <HiContent textLanguage={textLanguage}/>
         </div>
       </div>
     </div>

@@ -7,9 +7,10 @@ import Work from '../components/about/work';
 interface AboutProps {
   title: string;
   theme: boolean;
+  textLanguage:boolean;
 }
 
-function About({ title, theme }: AboutProps) {
+function About({ title, theme,textLanguage }: AboutProps) {
   useEffect(() => {
     document.title = title;
   }, [title]);
@@ -17,8 +18,10 @@ function About({ title, theme }: AboutProps) {
   return (
     <div id="about">
       <div id="introduction">
-        <Introduction/>
+        <Introduction textLanguage={textLanguage}/>
       </div>
+      <br />
+        <br />
       <div id="social">
         <Social/>
       </div>
@@ -26,12 +29,11 @@ function About({ title, theme }: AboutProps) {
         <br />
         <br />
         <br />
-        <br />
-        <SkillsComponent theme={theme}/>
+        <SkillsComponent textLanguage={textLanguage} theme={theme}/>
       </div>
       <br />
       <br />
-      <Work/>
+      <Work textLanguage={textLanguage}/>
     </div>
   );
 }
