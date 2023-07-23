@@ -23,7 +23,7 @@ function SkillsComponent({theme, textLanguage}:SkillProgressProps){
 
     return(
         <div id="skills-main">
-            <div id="skills-title"><h2>Skills</h2></div>
+            <div id="skills-title"><h2>{textLanguage? `Tools` : `Ferramentas`}</h2></div>
             <div id="skills-description">
            <button
               className="buttons-skills"

@@ -12,7 +12,7 @@ function Introduction({ textLanguage }: IntroductionProps) {
   My ultimate quest? Heaven, besides the black belt. With the tenacity of a code warrior (call me a Cybertemplary ... Deus Vult!), I fearlessly embrace audacious projects, conquering them one line of code at a time.
   You can find me crafting my digital mastery on the links below!`
       : `Com duas décadas nas costas, há uns 20 anos nasci em Maceió, Alagoas, hoje passo minhas noites em São Paulo;
-  Estou em uma missão para escrever boas soluções através de códigos (eu mesmo me desafiei, afinal, mente vazia é casa do cão). Munido de uma abordagem analítica e profissional, nunca fujo dos desafios, na verdade, abraço problemas desconhecidos como uma oportunidade para aprimorar minhas habilidades.
+  Estou em uma missão para escrever boas soluções através de códigos (eu mesmo me desafiei, afinal, mente vazia é casa do cão). Munido de uma abordagem analítica, nunca fujo dos desafios, na verdade, abraço problemas desconhecidos como uma oportunidade para aprimorar minhas habilidades.
   Aqui não tem diploma chique, sou um programador autodidata! Quem precisa de especialização quando se pode aprender de tudo? (Eu, estou disposto a ter um em Ciência da Computação). Atualmente venho atualizando meu conhecimento, prosperando com a evolução dinâmica do mercado de tecnologia através de cursos e mão no teclado.
   Minha busca suprema? O Céu, fora isso quero a faixa preta no Jiu. 
   Com a tenacidade de um "code warrior" (me chame de Cibertemplário... Deus Vult!), abraço destemidamente projetos audaciosos, conquistando-os uma linha de código de cada vez.
