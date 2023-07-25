@@ -115,13 +115,13 @@ function App() {
               <Routes>
                 <Route
                   path="/eduardo"
-                  element={<Hi textLanguage={englishtext} title="Eduardo" />}
+                  element={<Hi textLanguage={englishtext} title={englishtext ? `Hi` : `Olá`}/>}
                 />
                 <Route
                   path="/about"
                   element={
                     <About
-                      textLanguage={englishtext}
+                      textLanguage={englishtext} 
                       theme={lightTheme}
                       title={englishtext ? `About` : `Sobre`}
                     />
