@@ -14,7 +14,7 @@ function SkillsComponent({theme, textLanguage}:SkillProgressProps){
     const gin = (
         <img style={{width:"80%", backgroundColor: theme ? 'transparent' : 'white', borderRadius: "90px"}} src={ginImage} alt="gin" />
     )
-
+    
     const [activeDiv, setActiveDiv] = useState('languages');
 
     const handleSetActiveDiv = (div: string) => {
