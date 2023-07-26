@@ -19,3 +19,34 @@
     width: 100%;
     height: 60vh;
 }
+
+@media (max-width: 600px){
+    #about{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+#introduction{
+    width: 100%;
+    height: 200vh;
+}
+}
+
+@media (max-width: 875px) {
+  #introduction{
+    width: 100%;
+    height: 130vh;
+}
+#social{
+    width: 100%;
+    height: 5vh;
+}
+
+#work{
+    width: 100%;
+    height: 60vh;
+}
+}

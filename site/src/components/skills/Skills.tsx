@@ -110,7 +110,6 @@ function SkillsComponent({theme, textLanguage}:SkillProgressProps){
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" />        
             <span className="skill-images" style={{color: theme ? "black" : "white"}}>{flask}</span>
             <span className="skill-images">{gin}</span>
-            <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" />
             <img className="skill-images" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
             </div>

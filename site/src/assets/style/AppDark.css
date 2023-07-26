@@ -9,18 +9,18 @@
   
   .dark-theme #nav-div{
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 10%;
-    position: fixed;
-    z-index: 1; 
-    background-color: transparent; 
+  flex-direction: column;
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1; 
+  background-color: transparent;  
   }
   
   .dark-theme #body-div{
     background-color: transparent;
-    width: 90%;
-    height: 100%;
+  width: calc(100% - 150px);
+  height: 100%;
   }
   
   .dark-theme #footer-div{

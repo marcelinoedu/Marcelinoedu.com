@@ -16,8 +16,8 @@
   align-items: center;
 }
 .light-theme #icon-nav{
-  width: 30%;
-  height: 25%;
+  width: 50px;
+  height: 50px;
   border-radius: 90%;
   background-color: black;
   color: white;
@@ -33,8 +33,8 @@
 
 }
 .dark-theme #icon-nav{
-  width: 30%;
-  height: 25%;
+  width: 50px;
+  height: 50px;
   border-radius: 90%;
   background-color: #fbd38d;
   color: black;
