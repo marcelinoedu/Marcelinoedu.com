@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from '../../assets/imgs/img.png'
+import Photo from '../../assets/imgs/profile-pic (11).png'
 import '../../assets/style/about/introduction.css'
 interface IntroductionProps{
     textLanguage:boolean
