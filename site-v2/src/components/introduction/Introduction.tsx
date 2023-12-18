@@ -50,23 +50,23 @@ function Introduction() {
   );
 
   return (
-    <div>
+    <div className="main-introduction-div">
+      <div className="box-introduction">
       <h1>Eduardo Marcelino</h1>
       <span>🇧🇷 . software engineer</span>
       <p>
         With 21 years under my belt, I am a software engineer, where most of my
         professional experience is focused on creating backend services for web and mobile applications. No fancy degree here,
         I'm a self-taught programmer - "Who needs specialization when you can
-        learn it all?" - (I do, I am willing with Computer Science). My ultimate
-        quest? Heaven! I fearlessly embrace audacious projects, conquering them
-        one line of code at a time. You can find me crafting my digital mastery
+        learn it all?" - (I do, I am willing with Computer Science). You can find me crafting my digital mastery
         on the links below.
       </p>
-      <div>
+      <div className="links-introduction">
         <a href="">{github}</a>
         <a href="">{linkedIn}</a>
         <a href="">{twitter}</a>
         <a href="">{resume}</a>
+      </div>
       </div>
     </div>
   );
