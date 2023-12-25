@@ -67,14 +67,14 @@ function Introduction() {
         With 21 years under my belt, I am a software engineer, where most of my
         professional experience is focused on creating backend services for web and mobile applications. No fancy degree here,
         I'm a self-taught programmer - "Who needs specialization when you can
-        learn it all?" - (I do, I am willing with Computer Science). You can find me crafting my digital mastery
+        learn it all by yourself?" - (I do, I am willing with Computer Science). You can find me crafting my digital mastery
         on the links below.
       </p>
       <div className="links-introduction">
-        <a href="https://github.com/marcelinoedu">{github}</a>
-        <a href="https://www.linkedin.com/in/marcelinooedu/">{linkedIn}</a>
-        <a href="https://twitter.com/Marcelinooedu">{twitter}</a>
-        <a href="/">{resume}</a>
+        <a target="_blank" href="https://github.com/marcelinoedu">{github}</a>
+        <a target="_blank" href="https://www.linkedin.com/in/marcelinooedu/">{linkedIn}</a>
+        <a target="_blank" href="https://twitter.com/Marcelinooedu">{twitter}</a>
+        <a target="_blank" href="/">{resume}</a>
       </div>
       </div>
       <hr className="line"></hr>

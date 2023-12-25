@@ -1,0 +1,27 @@
+.main-work-component{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.box-work-component{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 200px;
+    background-color: aqua;
+}
+.work-component-left{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.work-component-right{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
