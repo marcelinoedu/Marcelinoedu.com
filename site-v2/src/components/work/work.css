@@ -1,27 +1,28 @@
 .main-work-component{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
 .box-work-component{
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 200px;
-    background-color: aqua;
+    height: 250px;
 }
 .work-component-left{
-    width: 100px;
+    width: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 .work-component-right{
-    width: 500px;
+    width: 420px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }

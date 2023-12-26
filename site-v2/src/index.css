@@ -36,5 +36,14 @@ p{
   padding-left: 10px;
   padding-right: 10px;
 }
+small{
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 200;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #808080;
+}
 
 
