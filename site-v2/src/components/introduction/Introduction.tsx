@@ -77,7 +77,6 @@ function Introduction() {
         <a target="_blank" href="/">{resume}</a>
       </div>
       </div>
-      <hr className="line"></hr>
     </div>
   );
 }

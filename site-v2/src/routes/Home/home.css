@@ -2,9 +2,10 @@
     .main-home-div {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       width: 100%;
+      gap: 30px;
     }
    
   }
@@ -21,3 +22,8 @@
     }
 
   }
+
+
+  .line{
+    width: 100px;
+  } 

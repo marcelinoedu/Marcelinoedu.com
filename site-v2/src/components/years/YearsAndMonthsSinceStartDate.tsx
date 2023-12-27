@@ -26,7 +26,7 @@ function YearsAndMonthsSinceStartDate({ startDate }:YandMProps) {
 
   return (
     <div>
-      <p style={{fontSize:"12px"}}>{years} {years === 1 ? 'year' : 'years'} and {months} {months === 1 ? 'month' : 'months'}</p>
+      <p style={{paddingLeft: "0px", fontSize:"12px"}}>{years} {years === 1 ? 'year' : 'years'} and {months} {months === 1 ? 'month' : 'months'}</p>
     </div>
   );
 }

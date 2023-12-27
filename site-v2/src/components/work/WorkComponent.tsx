@@ -4,18 +4,15 @@ import { ThemeContext } from "../../context/ThemeContext";
 import YearsAndMonthsSinceStartDate from "../years/YearsAndMonthsSinceStartDate";
 
 function WorkComponent() {
-  
   const { theme } = useContext(ThemeContext);
-  
   const color = theme == "light" ? "black" : "white";
-  
+  const linkColor = theme == "light" ? "rgb(0, 30, 255)" : "rgb(253, 45, 160)"
   const startDate = "2021-06-28";
-  
   const chain = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="15"
-      width="15"
+      height="12"
+      width="12"
       viewBox="0 0 512 512"
       fill={color}
     >
@@ -31,7 +28,7 @@ function WorkComponent() {
           <YearsAndMonthsSinceStartDate startDate={startDate} />
         </div>
         <div className="work-component-right">
-          <a target="_blanck" href="https://clubecasadesign.com.br/">Club&Casa Design - FullStack Developer {chain}</a>
+          <a style={{color: linkColor}} target="_blanck" href="https://clubecasadesign.com.br/">Club&Casa Design {chain}</a>
           <p> As a software developer at Club&Casa Design, I've been working on the main product team developing and maintaining the web platform that offers many benefits and tools for companies in the architecture market. My focus is on building and maintaining new resilient tools and features to integrate into Club&Casa Design's products. </p>
           <small> PHP · Laravel · JavaScript · Vue.js · Python · MySQL </small>
         </div>

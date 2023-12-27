@@ -2,7 +2,8 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: calc(100% - 10px);
+    padding-left: 10px;
 }
 
 .box-work-component{
@@ -10,7 +11,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 250px;
+    height: 350px;
 }
 .work-component-left{
     width: 180px;
@@ -24,5 +25,5 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }

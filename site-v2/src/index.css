@@ -14,8 +14,8 @@ h1{
   padding-right: 10px;
 }
 h2{
-  font-weight: 500;
-  font-size: 25px;
+  font-weight: 400;
+  font-size: 21px;
   margin-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -35,6 +35,8 @@ p{
   font-weight: 300;
   padding-left: 10px;
   padding-right: 10px;
+  line-height: 20px;
+
 }
 small{
   font-size: 15px;
@@ -44,6 +46,13 @@ small{
   padding-left: 10px;
   padding-right: 10px;
   color: #808080;
+  line-height: 20px;
 }
-
+a{
+  font-weight: 300;
+  font-size: 15px;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-top: 10px;
+}
 
