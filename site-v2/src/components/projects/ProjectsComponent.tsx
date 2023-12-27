@@ -36,20 +36,15 @@ function ProjectsComponent() {
           <a
             style={{ color: linkColor }}
             target="_blanck"
-            href="https://clubecasadesign.com.br/"
+            href="https://github.com/marcelinoedu/Algorithms"
           >
-            Club&Casa Design {chain}
+            Algorithms {chain}
           </a>
           <p>
             {" "}
-            As a software developer at Club&Casa Design, I've been working on
-            the main product team developing and maintaining the web platform
-            that offers many benefits and tools for companies in the
-            architecture market. My focus is on building and maintaining new
-            resilient tools and features to integrate into Club&Casa Design's
-            products.{" "}
+            Algorithms and Data Structures studies.{" "}
           </p>
-          <small> PHP · Laravel · JavaScript · Vue.js · Python · MySQL </small>
+          <small> C · C++ · Java · Go · Python · Rust </small>
 
       </div>
     </div>

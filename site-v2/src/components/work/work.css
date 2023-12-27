@@ -2,28 +2,21 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    width: calc(100% - 10px);
-    padding-left: 10px;
+    width: 100%;
 }
 
 .box-work-component{
     margin-top: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
-    height: 350px;
+    height: 250px;
 }
-.work-component-left{
-    width: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-.work-component-right{
-    width: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+.box-work-component a{
+   width: calc(100% - 10px);
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 10px;
 }
