@@ -74,7 +74,7 @@ function Introduction() {
         <a target="_blank" href="https://github.com/marcelinoedu">{github}</a>
         <a target="_blank" href="https://www.linkedin.com/in/marcelinooedu/">{linkedIn}</a>
         <a target="_blank" href="https://twitter.com/Marcelinooedu">{twitter}</a>
-        <a target="_blank" href="/">{resume}</a>
+        <a target="_blank" href="/cv/cv.pdf">{resume}</a>
       </div>
       </div>
     </div>
