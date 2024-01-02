@@ -27,7 +27,6 @@ function WorkComponent() {
           <a style={{color: linkColor}} target="_blanck" href="https://clubecasadesign.com.br/">Club&Casa Design -  <YearsAndMonthsSinceStartDate startDate={startDate} /></a>
           <p> As a software developer at Club&Casa Design, I've been working on the main product team developing and maintaining the web platform that offers many benefits and tools for companies in the architecture market. My focus is on building and maintaining new resilient tools and features to integrate into Club&Casa Design's products. </p>
           <small> PHP · Laravel · JavaScript · Vue.js · Python · MySQL </small>
-     
       </div>
     </div>
   );
